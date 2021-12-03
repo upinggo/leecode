@@ -1,3 +1,3 @@
 # leecode
  
-This is normal arthmithic for JavaScript.In LeeCode cn
+This is normal arithmetic for JavaScript.In LeeCode cn
