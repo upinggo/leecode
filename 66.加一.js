@@ -44,5 +44,4 @@ var plusOne = function (digits) {
 };
 // @lc code=end
 
-a = plusOne([9,9,9]);
-console.log(a, "abc");
+plusOne([9,9,9]);
