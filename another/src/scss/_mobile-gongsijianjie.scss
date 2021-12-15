@@ -1,0 +1,60 @@
+﻿body.mobile-gongsijianjie {
+    width: 100vw;
+    overflow-x: hidden;
+    color: $black-1;
+    background-size: 100% auto;
+
+
+
+    .section-tab-template {
+
+        .tab-container {
+            margin-top: 0.1rem;
+            margin-bottom: 0.2rem;
+
+            .text {
+                font-size: 0.24rem;
+                padding: 1.6rem 0.2rem 4rem;
+                margin: 0 -0.2rem;
+                background-color: $blue-1;
+                color: $white;
+                line-height: 2;
+            }
+
+            .image {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-bottom-right-radius: 2rem;
+                margin-top: -3.3rem;
+            }
+        }
+    }
+
+    .section-list {
+        padding-left: calc(50% - 1.6rem);
+        text-align: left;
+        margin-top: 0.56rem;
+        margin-bottom: 1.4rem;
+
+        .section-list-item {
+            font-size: 0.24rem;
+            padding-left: 0.2rem;
+            position: relative;
+            margin-bottom: 0.2rem;
+            margin-top: 0.2rem;
+
+            &:after {
+                position: absolute;
+                content: '';
+                width: 0.06rem;
+                height: 0.06rem;
+                border-radius: 50%;
+                background-color: $blue-1;
+                top: 50%;
+                left: 0;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
