@@ -106,7 +106,6 @@ input {
     }
 }
 
-
 // mobile
 .mobile {
 
@@ -403,43 +402,6 @@ input {
             &:after {
                 background: url(../image/icons/swiper-right.png) no-repeat 0 0;
                 background-size: 100% 100%;
-            }
-        }
-    }
-}
-// pc
-.pc {
-    .section-top-banner {
-        width: 100%;
-        background-color: $white;
-
-        .section-top-left {
-            width: 2.18rem;
-            height: 1rem;
-            background-color: $blue-1;
-
-            .logo {
-                width: 0.94rem;
-                height: auto;
-            }
-        }
-
-
-        .section-top-right {
-            .search, .menu {
-                cursor: pointer;
-            }
-
-            .search {
-                height: 0.33rem;
-                width: auto;
-            }
-
-            .menu {
-                height: 0.33rem;
-                width: auto;
-                margin-left: 0.5rem;
-                margin-right: 0.3rem;
             }
         }
     }
