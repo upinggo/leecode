@@ -1,8 +1,4 @@
 ﻿body.pc-gongsijianjie {
-  background: url(../image/gongsijieshao/3.png) center no-repeat;
-  background-position-y: 50px;
-  /* background-size: cover; */
-  position: relative;
   .tab {
     width: 75px;
     // height: 20px;
@@ -181,47 +177,96 @@
         }
       }
     }
-    .container {
-      max-width: 1360px;
-      margin: auto;
-      .section-text-banner {
-        // position: relative;
-        // background-size: initial;
-        // background: url(../image/gongsijieshao/3.png) top no-repeat;
-        // background-size: cover;
-        height: 580px;
+
+    .section-text-banner {
+      &::before {
+        content: "";
+        background: url(../image/gongsijieshao/3.png) center no-repeat;
+        background-size: cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+      }
+      height: 240px;
+      position: relative;
+
+      .section-banner-titles {
+        // padding:0;
         position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
 
-        .section-banner-titles {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          left: 150px;
+        .section-banner-title {
+          // font-size: 72px;
+          color: $white;
+          position: relative;
+          padding-bottom: 50px;
 
-          .section-banner-title {
-            font-size: 72px;
-            color: $white;
-            position: relative;
-            padding-bottom: 50px;
-
-            &:after {
-              content: "";
-              width: 60px;
-              height: 7px;
-              position: absolute;
-              bottom: 2px;
-              left: 0;
-              display: block;
-              z-index: 100;
-              background-color: $white;
-            }
+          &:after {
+            content: "";
+            width: 60px;
+            height: 7px;
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            display: block;
+            z-index: 100;
+            background-color: $white;
           }
-
-          .section-banner-des {
-            font-size: 0.24rem;
-            padding-bottom: 0.1rem;
-            color: $white;
+        }
+      }
+    }
+    //company-content
+    .company-content {
+      position: relative;
+      // transform: translateY(-2px);
+      min-height: 40vw;
+      background-color: $blue-1;
+      width: 100%;
+      &::before {
+        content: "";
+        position: absolute;
+        width: calc(100% + 500px);
+        height: 100%;
+        z-index: -1;
+        left: -500px;
+        background-color: $blue-1;
+        min-height: 40px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        right: -5%;
+        background: $blue-1 url(../image/gongsijieshao/4.png) bottom no-repeat;
+        background-size: cover;
+        height: 35vw;
+        width: 35vw;
+        background-color: $white;
+        display: block;
+      }
+      .description {
+        width: calc(100% - 35vw);
+        padding-bottom: 60px;
+      }
+    }
+    .bus-introduce {
+      position: relative;
+      height: 500px;
+      ul {
+        margin: 0px;
+        padding: 0;
+        > li {
+          font-size: 16px;
+          list-style-position: inside;
+          &::marker {
+            color: $blue-1;
+            font-size: 16px;
           }
+          // list-style-type: none;
+          margin: 15px 0;
         }
       }
     }
