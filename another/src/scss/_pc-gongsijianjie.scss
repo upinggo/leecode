@@ -1,4 +1,5 @@
 ﻿body.pc-gongsijianjie {
+  background-color: $black-3;
   .tab {
     width: 75px;
     // height: 20px;
@@ -220,6 +221,35 @@
     }
     //company-content
     .company-content {
+      .select-title {
+        .tab {
+          margin: 0px 25px;
+          &.active {
+            background: url(../image/icons/selected.png) no-repeat 0 0;
+            background-size: 100% 100%;
+            color: $blue-1;
+          }
+        }
+        select {
+          border: none;
+
+          background: none;
+          color: $white;
+          appearance: none;
+        }
+        align-content: center;
+        align-items: center;
+        .icon {
+          margin: 0 23px;
+          height: 13px;
+          width: 13px;
+        }
+        position: absolute;
+        height: 40px;
+        top: -40px;
+        background-color: rgba(35, 165, 234, 0.9);
+        width: 100%;
+      }
       position: relative;
       // transform: translateY(-2px);
       min-height: 40vw;
@@ -244,15 +274,17 @@
         background-size: cover;
         height: 35vw;
         width: 35vw;
-        background-color: $white;
+        background-color: $black-3;
         display: block;
       }
       .description {
         width: calc(100% - 35vw);
+        line-height: 25px;
         padding-bottom: 60px;
       }
     }
     .bus-introduce {
+      background-color: $black-3;
       position: relative;
       height: 500px;
       ul {
@@ -267,6 +299,96 @@
           }
           // list-style-type: none;
           margin: 15px 0;
+        }
+      }
+    }
+    .certification {
+      margin-top: 30px;
+      position: relative;
+      height: 380px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 100%;
+        z-index: -1;
+        right: -120px;
+        left: -120px;
+        background: url(../image/gongsijieshao/centification_bg.png) top
+          no-repeat;
+        background-size: cover;
+      }
+    }
+    footer.flex {
+      border-bottom: 1px $black-7 solid;
+      // height: 173px;
+      font-size: 12px;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: space-between;
+      align-items: stretch;
+      > .flex {
+        margin-top: 35px;
+        h3.title {
+          margin: 0;
+          margin-bottom: 15px;
+          height: 30px;
+          line-height: 30px;
+        }
+      }
+      .f-item {
+        span {
+          display: inline-flex;
+          padding: 10px 0;
+          &:hover {
+            color: $blue-1;
+            cursor: pointer;
+          }
+        }
+      }
+      // .production {
+      //   // flex: 0.5;
+      //   > div.flex {
+      //     flex-wrap: wrap;
+      //   }
+      // }
+      .main-footer {
+        img.logo {
+          height: 30px;
+          width: 50px;
+          margin-bottom: 20px;
+        }
+        span.description {
+          line-height: 30px;
+          > img.icon {
+            height: 10px;
+            margin-right: 10px;
+            width: 10px;
+          }
+        }
+      }
+    }
+    .copyright {
+      justify-content: space-between;
+      align-items: center;
+      span {
+        margin-right: 30px;
+      }
+      .icon {
+        margin-left: auto;
+        > div {
+          border-radius: 50%;
+          height: 15px;
+          width: 15px;
+          border: 1px $black-7 solid;
+          margin: 0 12px;
+          &:hover {
+            background-color: $blue-1;
+          }
+          img {
+            height: 100%;
+            width: 100%;
+          }
         }
       }
     }
