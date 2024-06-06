@@ -18,9 +18,22 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2) {
-let l1_len = l1.length;
-let l2_len = l2.length;
+    const dummy = new ListNode(0);
+    let curr = dummy;
+    let carry = 0;
+    while(l1 !== null || l2 !== null || carry !== 0) {
+        let x = l1 ? l1.val : 0;
+        let y = l2 ? l2.val : 0;
+        let sum = x + y + carry;
+        carry = Math.floor(sum / 10);
+        curr.next = new ListNode(sum % 10);
+        curr = curr.next;
+        l1 = l1 ? l1.next : null;
+        l2 = l2 ? l2.next : null;
+    }
+  
 
+    return dummy.next;
 };
 // @lc code=end
 
